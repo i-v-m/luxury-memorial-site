@@ -125,6 +125,33 @@ export default function Header() {
             {/* Left side - User actions */}
             <div className="flex items-center space-x-3">
               <div className="flex items-center space-x-2 ml-4">
+                {/* Schedule */}
+                <div className="hidden lg:flex items-center space-x-1.5 text-gray-600">
+                  <Icon name="Clock" size={16} />
+                  <span className="text-sm">Пн-Пт 9:00-18:00</span>
+                </div>
+
+                {/* Address */}
+                <div className="hidden xl:flex items-center space-x-1.5 text-gray-600">
+                  <Icon name="MapPin" size={16} />
+                  <span className="text-sm">Москва, ул. Примерная, 1</span>
+                </div>
+
+                {/* Recently Viewed */}
+                <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
+                  <Link to="/recently-viewed">
+                    <Icon name="Eye" size={18} />
+                    {state.recentlyViewed.length > 0 && (
+                      <Badge 
+                        variant="default" 
+                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-purple-500 text-white"
+                      >
+                        {state.recentlyViewed.length}
+                      </Badge>
+                    )}
+                  </Link>
+                </Button>
+
                 {/* Cart */}
                 <Button variant="ghost" className="relative h-auto px-3 py-2 text-green-600 hover:text-green-700 hover:bg-green-50" asChild>
                   <Link to="/cart" className="flex items-center space-x-2">
@@ -205,6 +232,17 @@ export default function Header() {
 
             {/* Right side - Phone and call request */}
             <div className="flex items-center space-x-3">
+              {/* Telegram button */}
+              <a 
+                href="https://t.me/memorial_ru" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 transition-colors"
+                title="Написать в Telegram"
+              >
+                <Icon name="Send" size={20} />
+              </a>
+
               {/* WhatsApp button */}
               <a 
                 href="https://wa.me/71234567890" 
