@@ -128,7 +128,7 @@ export default function Header() {
                 {/* 1. Address */}
                 <div className="hidden xl:flex items-center space-x-1.5 text-gray-600">
                   <Icon name="MapPin" size={16} />
-                  <span className="text-sm">Москва, ул. Примерная, 1</span>
+                  <span className="text-sm">г.Москва, Адмирала Корнилова, 29А</span>
                 </div>
 
                 {/* 2. Schedule */}
