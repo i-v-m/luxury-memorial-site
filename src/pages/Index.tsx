@@ -361,7 +361,7 @@ export default function Index() {
               <div key={index} className="bg-white rounded-xl p-6 shadow-md border">
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <Icon key={i} name="Star" size={14} className="text-yellow-400" />
+                    <Icon key={i} name="Star" size={14} className="text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
                 <h4 className="font-bold text-lg mb-2">{review.name}</h4>
