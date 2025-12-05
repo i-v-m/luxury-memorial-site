@@ -125,34 +125,19 @@ export default function Header() {
             {/* Left side - User actions */}
             <div className="flex items-center space-x-3">
               <div className="flex items-center space-x-2 ml-4">
-                {/* Schedule */}
-                <div className="hidden lg:flex items-center space-x-1.5 text-gray-600">
-                  <Icon name="Clock" size={16} />
-                  <span className="text-sm">Пн-Пт 9:00-18:00</span>
-                </div>
-
-                {/* Address */}
+                {/* 1. Address */}
                 <div className="hidden xl:flex items-center space-x-1.5 text-gray-600">
                   <Icon name="MapPin" size={16} />
                   <span className="text-sm">Москва, ул. Примерная, 1</span>
                 </div>
 
-                {/* Recently Viewed */}
-                <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
-                  <Link to="/recently-viewed">
-                    <Icon name="Eye" size={18} />
-                    {state.recentlyViewed.length > 0 && (
-                      <Badge 
-                        variant="default" 
-                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-purple-500 text-white"
-                      >
-                        {state.recentlyViewed.length}
-                      </Badge>
-                    )}
-                  </Link>
-                </Button>
+                {/* 2. Schedule */}
+                <div className="hidden lg:flex items-center space-x-1.5 text-gray-600">
+                  <Icon name="Clock" size={16} />
+                  <span className="text-sm">Без выходных: с 9:00 до 21:00</span>
+                </div>
 
-                {/* Cart */}
+                {/* 3. Cart */}
                 <Button variant="ghost" className="relative h-auto px-3 py-2 text-green-600 hover:text-green-700 hover:bg-green-50" asChild>
                   <Link to="/cart" className="flex items-center space-x-2">
                     <Icon name="ShoppingBasket" size={18} />
@@ -168,7 +153,22 @@ export default function Header() {
                   </Link>
                 </Button>
 
-                {/* Search - скрыт на мобильных */}
+                {/* 4. Recently Viewed */}
+                <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
+                  <Link to="/recently-viewed">
+                    <Icon name="Eye" size={18} />
+                    {state.recentlyViewed.length > 0 && (
+                      <Badge 
+                        variant="default" 
+                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-purple-500 text-white"
+                      >
+                        {state.recentlyViewed.length}
+                      </Badge>
+                    )}
+                  </Link>
+                </Button>
+
+                {/* 4. Search */}
                 <div className="relative hidden sm:block">
                   {!searchOpen && (
                     <Button 
@@ -198,22 +198,7 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* Comparison - скрыт на мобильных */}
-                <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
-                  <Link to="/comparison">
-                    <Icon name="BarChart3" size={18} />
-                    {state.comparison.length > 0 && (
-                      <Badge 
-                        variant="default" 
-                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-blue-500 text-white"
-                      >
-                        {state.comparison.length}
-                      </Badge>
-                    )}
-                  </Link>
-                </Button>
-
-                {/* Favorites - скрыт на мобильных */}
+                {/* 4. Favorites */}
                 <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
                   <Link to="/favorites">
                     <Icon name="Heart" size={18} />
@@ -223,6 +208,21 @@ export default function Header() {
                         className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-pink-500 text-white"
                       >
                         {state.favorites.length}
+                      </Badge>
+                    )}
+                  </Link>
+                </Button>
+
+                {/* 4. Comparison */}
+                <Button variant="ghost" size="icon" className="relative h-9 w-9 text-gray-600 hover:text-gray-900 hover:bg-gray-50 hidden sm:inline-flex" asChild>
+                  <Link to="/comparison">
+                    <Icon name="BarChart3" size={18} />
+                    {state.comparison.length > 0 && (
+                      <Badge 
+                        variant="default" 
+                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-blue-500 text-white"
+                      >
+                        {state.comparison.length}
                       </Badge>
                     )}
                   </Link>
