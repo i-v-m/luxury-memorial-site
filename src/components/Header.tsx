@@ -257,13 +257,13 @@ export default function Header() {
               </a>
 
               {/* Call request button - скрыт на мобильных */}
-              <button 
-                className="hidden sm:flex items-center space-x-1 text-gray-600 hover:text-green-600 transition-colors"
-                title="Заказать звонок"
+              <Button 
+                className="hidden sm:flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white"
+                size="sm"
               >
                 <Icon name="PhoneCall" size={16} />
-                <span className="hidden lg:inline text-sm">Заказать звонок</span>
-              </button>
+                <span className="hidden lg:inline">Заказать звонок</span>
+              </Button>
 
               {/* Email */}
               <a 
