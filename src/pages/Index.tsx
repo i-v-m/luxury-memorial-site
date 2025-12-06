@@ -314,29 +314,60 @@ export default function Index() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
             {catalogProducts.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
-                <div className="aspect-[3/4] overflow-hidden bg-muted relative">
+              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="relative aspect-square overflow-hidden">
                   <img 
                     src={product.image}
                     alt={product.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
-                  <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                    АКЦИЯ
+                  <div className="absolute top-3 right-3">
+                    <div className="bg-red-500 hover:bg-red-600 text-white text-xs font-medium px-2.5 py-1 rounded">
+                      Скидка
+                    </div>
                   </div>
                 </div>
-                <CardHeader className="p-3 md:p-4">
-                  <CardTitle className="font-heading text-sm md:text-base line-clamp-2">{product.title}</CardTitle>
-                  <div className="space-y-1">
-                    <div className="text-xs md:text-sm text-muted-foreground line-through">
-                      {product.oldPrice}
-                    </div>
-                    <div className="text-base md:text-lg font-bold text-green-600">
-                      {product.price}
+                
+                <CardHeader className="pb-2">
+                  <CardTitle className="font-heading text-lg line-clamp-1">
+                    {product.title}
+                  </CardTitle>
+                </CardHeader>
+                
+                <CardContent className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl font-bold text-primary">
+                        {product.price}
+                      </span>
+                      <span className="text-sm line-through text-muted-foreground">
+                        {product.oldPrice}
+                      </span>
                     </div>
                   </div>
-                </CardHeader>
+                  
+                  <div className="flex gap-2">
+                    <Button 
+                      size="sm"
+                      className="flex-1 bg-primary hover:bg-primary/90"
+                    >
+                      Подробнее
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="icon"
+                    >
+                      <Icon name="Heart" size={18} />
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="icon"
+                    >
+                      <Icon name="BarChart3" size={18} />
+                    </Button>
+                  </div>
+                </CardContent>
               </Card>
             ))}
           </div>
