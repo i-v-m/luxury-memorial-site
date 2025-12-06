@@ -496,27 +496,56 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Простые отзывы для ускорения загрузки */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              { name: "Анна М.", text: "Очень довольна качеством памятника. Мастера выполнили работу на высоком уровне." },
-              { name: "Дмитрий П.", text: "Заказывали семейный комплекс из красного гранита. Результат превзошёл ожидания." },
-              { name: "Елена В.", text: "Спасибо за терпение в такой трудный момент. Специалисты очень деликатно всё объяснили." },
-              { name: "Сергей К.", text: "Профессиональный подход на всех этапах. От эскиза до установки всё сделано идеально." },
-              { name: "Ольга Т.", text: "Благодарю за оперативность и внимание к деталям. Памятник получился очень красивым." },
-              { name: "Виктор Н.", text: "Качественная работа за разумные деньги. Рекомендую всем своим знакомым." }
-            ].map((review, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-md border">
-                <div className="flex gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Icon key={i} name="Star" size={14} className="text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <h4 className="font-bold text-lg mb-2">{review.name}</h4>
-                <p className="text-slate-600 mb-4">{review.text}</p>
-              </div>
-            ))}
-          </div>
+          {/* Carousel Reviews */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-7xl mx-auto mb-12"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {[
+                { name: "Анна М.", date: "15 ноября 2024", text: "Очень довольна качеством памятника. Мастера выполнили работу на высоком уровне.", avatar: "А" },
+                { name: "Дмитрий П.", date: "8 ноября 2024", text: "Заказывали семейный комплекс из красного гранита. Результат превзошёл ожидания.", avatar: "Д" },
+                { name: "Елена В.", date: "2 ноября 2024", text: "Спасибо за терпение в такой трудный момент. Специалисты очень деликатно всё объяснили.", avatar: "Е" },
+                { name: "Сергей К.", date: "28 октября 2024", text: "Профессиональный подход на всех этапах. От эскиза до установки всё сделано идеально.", avatar: "С" },
+                { name: "Ольга Т.", date: "22 октября 2024", text: "Благодарю за оперативность и внимание к деталям. Памятник получился очень красивым.", avatar: "О" },
+                { name: "Виктор Н.", date: "15 октября 2024", text: "Качественная работа за разумные деньги. Рекомендую всем своим знакомым.", avatar: "В" }
+              ].map((review, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/3">
+                  <Card className="bg-white shadow-md border h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      {/* Stars */}
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(5)].map((_, i) => (
+                          <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-yellow-400" />
+                        ))}
+                      </div>
+                      
+                      {/* Review Text */}
+                      <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
+                        {review.text}
+                      </p>
+                      
+                      {/* Author Info */}
+                      <div className="flex items-center gap-3 pt-4 border-t">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                          {review.avatar}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-base">{review.name}</h4>
+                          <p className="text-sm text-muted-foreground">{review.date}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
 
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
