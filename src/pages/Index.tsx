@@ -4,6 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Lazy loading для компонентов
 const Accordion = lazy(() => import('@/components/ui/accordion').then(module => ({
@@ -76,6 +83,28 @@ export default function Index() {
     { title: 'Установка и монтаж', description: 'Профессиональная установка с гарантией качества', icon: 'Settings' },
     { title: 'Гравировка и оформление', description: 'Художественная гравировка портретов и надписей', icon: 'PenTool' },
     { title: 'Благоустройство места', description: 'Комплексное обустройство мемориального участка', icon: 'TreePine' }
+  ];
+
+  const materials = [
+    { name: 'Габбро-диабаз', description: 'Прочная горная порода вулканического происхождения с выраженной зернистой структурой.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/254932d2-9059-486d-939d-01b32729401f.jpg' },
+    { name: 'Дымовский', description: 'Оттенки варьируются от темно-серого с алыми вкраплениями до шоколадного. Идеально комбинируется с элементами из бронзы и темным гранитом.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/8e1369ca-3cda-48fc-a213-850e11fbf6a4.jpg' },
+    { name: 'Капустинский', description: 'Насыщенный красный или розово-красный тон. Нанесение портрета непосредственно на камень не рекомендуется.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/ca5b4a5f-4bf9-41f6-b7e1-3da1a8ffff81.jpg' },
+    { name: 'Сопка Бунтина', description: 'Глубокий черный фон с вкраплениями темной зелени. Обеспечивает высокую четкость и контрастность для надписей.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/1701e879-829f-42c0-8fc7-4ef27026e241.jpg' },
+    { name: 'Мрамор Коелга', description: 'Классический белоснежный материал с эффектом легкой полупрозрачности, известный со времен античности.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/c8668546-660f-4126-a8a4-098bc0d0e616.jpg' },
+    { name: 'Мансуровский', description: 'Светло-серый однородный цвет, имеющий легкий жемчужный подтон.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/254932d2-9059-486d-939d-01b32729401f.jpg' },
+    { name: 'Возрождение', description: 'Монолитный гранит, сочетающий в своей палитре приглушенные розовые и серые тона.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/8e1369ca-3cda-48fc-a213-850e11fbf6a4.jpg' },
+    { name: 'Сюскюянсаари', description: 'Богатый красный оттенок с вишневыми или малиновыми нотками. Каждый срез камня обладает уникальным, неповторяющимся узором.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/ca5b4a5f-4bf9-41f6-b7e1-3da1a8ffff81.jpg' },
+    { name: 'Лезниковский', description: 'Цветовая гамма охватывает всю палитру красного — от светлого бордо до глубокого темно-красного.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/ca5b4a5f-4bf9-41f6-b7e1-3da1a8ffff81.jpg' },
+    { name: 'Змеевик', description: 'Разновидность серпентинита, представленная в широком спектре зеленых тонов — от темного изумруда до светлого желто-зеленого.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/1701e879-829f-42c0-8fc7-4ef27026e241.jpg' },
+    { name: 'Лабрадорит', description: 'Темно-серый, почти черный камень с включениями синих и зеленых оттенков и характерным перламутровым сиянием.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/1701e879-829f-42c0-8fc7-4ef27026e241.jpg' },
+    { name: 'Гранатовый Амфиболит', description: 'Обладает эксклюзивным рисунком, созданным за счет причудливого сочетания вкраплений черного, серого и алого цветов.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/8e1369ca-3cda-48fc-a213-850e11fbf6a4.jpg' },
+    { name: 'Мрамор Уфалей', description: 'Имеет благородную окраску серо-голубых тонов с выразительным рисунком из контрастных светлых и угольно-серых прожилок.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/c8668546-660f-4126-a8a4-098bc0d0e616.jpg' },
+    { name: 'Калгуваара', description: 'Структура камня образована сросшимися кристаллами в красной, розовой и серой гамме.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/ca5b4a5f-4bf9-41f6-b7e1-3da1a8ffff81.jpg' },
+    { name: 'Масловский', description: 'Относится к гранитам, обладает уникальной зеленой палитрой от темного изумрудного до светлого оливкового оттенка.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/1701e879-829f-42c0-8fc7-4ef27026e241.jpg' },
+    { name: 'Цветок Урала', description: 'Один из видов гранита, характеризующийся спокойным, однородным серым цветом.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/254932d2-9059-486d-939d-01b32729401f.jpg' },
+    { name: 'Балтик Грин', description: 'Предлагает разнообразие зеленых оттенков: от травянистого и зелено-коричневого до серо-зеленого. Обладает высокими декоративными качествами.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/1701e879-829f-42c0-8fc7-4ef27026e241.jpg' },
+    { name: 'Куртинский', description: 'Отличается утонченным бежевым цветом.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/c8668546-660f-4126-a8a4-098bc0d0e616.jpg' },
+    { name: 'Покостовский', description: 'Главное преимущество — постоянство и стабильность цвета. Прекрасно сочетается с черным гранитом и позолоченными элементами.', image: 'https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/254932d2-9059-486d-939d-01b32729401f.jpg' },
   ];
 
   return (
@@ -440,6 +469,47 @@ export default function Index() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Materials Catalog Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="font-heading text-4xl font-bold mb-4">Каталог материалов</h3>
+            <p className="text-xl text-muted-foreground">Премиальные материалы для изготовления памятников</p>
+          </div>
+
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-7xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {materials.map((material, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5">
+                  <Card className="h-full hover:shadow-xl transition-shadow">
+                    <CardContent className="p-4">
+                      <div className="aspect-square overflow-hidden rounded-lg mb-4">
+                        <img 
+                          src={material.image}
+                          alt={material.name}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <h4 className="font-heading font-bold text-lg mb-2">{material.name}</h4>
+                      <p className="text-sm text-muted-foreground line-clamp-3">{material.description}</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
 
