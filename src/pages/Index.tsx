@@ -443,17 +443,17 @@ export default function Index() {
             <p className="text-xl text-muted-foreground">Прозрачная и удобная схема оплаты</p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-blue-600"></div>
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Icon name="FileSignature" size={32} className="text-blue-600" />
+                <CardContent className="p-10 text-center">
+                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="FileSignature" size={40} className="text-blue-600" />
                   </div>
-                  <div className="text-5xl font-bold text-blue-600 mb-2">50%</div>
-                  <h4 className="font-heading text-xl font-bold mb-3">Предоплата</h4>
-                  <p className="text-muted-foreground">
+                  <div className="text-6xl font-bold text-blue-600 mb-3">50%</div>
+                  <h4 className="font-heading text-2xl font-bold mb-4">Предоплата</h4>
+                  <p className="text-lg text-muted-foreground">
                     При подписании договора и утверждении эскиза
                   </p>
                 </CardContent>
@@ -461,27 +461,13 @@ export default function Index() {
 
               <Card className="relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 to-green-600"></div>
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Icon name="Hammer" size={32} className="text-green-600" />
+                <CardContent className="p-10 text-center">
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="CheckCircle2" size={40} className="text-green-600" />
                   </div>
-                  <div className="text-5xl font-bold text-green-600 mb-2">25%</div>
-                  <h4 className="font-heading text-xl font-bold mb-3">Промежуточный платёж</h4>
-                  <p className="text-muted-foreground">
-                    После завершения изготовления памятника
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-purple-600"></div>
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Icon name="CheckCircle2" size={32} className="text-purple-600" />
-                  </div>
-                  <div className="text-5xl font-bold text-purple-600 mb-2">25%</div>
-                  <h4 className="font-heading text-xl font-bold mb-3">Окончательный расчёт</h4>
-                  <p className="text-muted-foreground">
+                  <div className="text-6xl font-bold text-green-600 mb-3">50%</div>
+                  <h4 className="font-heading text-2xl font-bold mb-4">Окончательный расчёт</h4>
+                  <p className="text-lg text-muted-foreground">
                     После установки и приёмки работ
                   </p>
                 </CardContent>
