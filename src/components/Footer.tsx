@@ -62,11 +62,31 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <Icon name="MapPin" size={18} className="text-primary flex-shrink-0 mt-1" />
                 <div className="text-sm">
-                  <h4 className="font-semibold mb-2">Адрес</h4>
+                  <h4 className="font-semibold mb-2">Адрес или самовывоз со склада</h4>
                   <p className="text-slate-300">г. Москва, ул. Мемориальная, 15</p>
                   <p className="text-slate-400 mt-1">
                     Ежедневно с 9:00 до 22:00
                   </p>
+                </div>
+              </div>
+              
+              {/* Phone */}
+              <div className="flex items-start space-x-3">
+                <Icon name="Phone" size={18} className="text-primary flex-shrink-0 mt-1" />
+                <div className="text-sm">
+                  <a href="tel:+71234567890" className="text-slate-300 hover:text-white transition-colors">
+                    +7 (123) 456-78-90
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start space-x-3">
+                <Icon name="Mail" size={18} className="text-primary flex-shrink-0 mt-1" />
+                <div className="text-sm">
+                  <a href="mailto:info@memorial.ru" className="text-slate-300 hover:text-white transition-colors">
+                    info@memorial.ru
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,6 +181,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-slate-400">
             <p>© 2024 Вечная Память. Все права защищены.</p>
+            
+            {/* Payment Systems */}
+            <div className="flex items-center space-x-3">
+              <Icon name="CreditCard" size={20} className="text-slate-500" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-5 opacity-70" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-5 opacity-70" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/MIR_logo.svg" alt="МИР" className="h-5 opacity-70" />
+              <span className="text-slate-500">СБП</span>
+            </div>
           </div>
           
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 text-sm text-slate-400">
