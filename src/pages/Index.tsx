@@ -507,8 +507,8 @@ export default function Index() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="bg-green-600 hover:bg-green-700 text-white border-green-600" />
+            <CarouselNext className="bg-green-600 hover:bg-green-700 text-white border-green-600" />
           </Carousel>
         </div>
       </section>
