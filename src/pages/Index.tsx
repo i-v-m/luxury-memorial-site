@@ -374,7 +374,6 @@ export default function Index() {
 
           <div className="text-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-12">
-              <Icon name="Grid3x3" size={20} className="mr-2" />
               Перейти в каталог
             </Button>
           </div>
