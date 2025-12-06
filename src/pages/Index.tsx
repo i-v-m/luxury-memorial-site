@@ -825,7 +825,111 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Useful Information Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="font-heading text-4xl font-bold mb-4">Полезная информация</h3>
+            <p className="text-xl text-muted-foreground">Статьи и советы по выбору памятников</p>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=800&h=600&fit=crop&q=80"
+                  alt="Выбор материала для памятника"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <CardHeader>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Icon name="Calendar" size={16} />
+                  <span>15 ноября 2024</span>
+                </div>
+                <CardTitle className="font-heading text-xl">
+                  Как выбрать материал для памятника
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Подробное руководство по выбору гранита, мрамора и других материалов. Сравнение характеристик и советы экспертов.
+                </p>
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  Читать далее
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1542435503-956c469947f6?w=800&h=600&fit=crop&q=80"
+                  alt="Этапы изготовления памятника"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <CardHeader>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Icon name="Calendar" size={16} />
+                  <span>10 ноября 2024</span>
+                </div>
+                <CardTitle className="font-heading text-xl">
+                  Этапы изготовления памятника
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  От эскиза до установки: полный цикл работ с фотографиями и пояснениями. Узнайте, как создаётся ваш памятник.
+                </p>
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  Читать далее
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80"
+                  alt="Уход за памятником"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <CardHeader>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Icon name="Calendar" size={16} />
+                  <span>5 ноября 2024</span>
+                </div>
+                <CardTitle className="font-heading text-xl">
+                  Правильный уход за памятником
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Рекомендации по уходу и сохранению внешнего вида. Какие средства использовать и чего следует избегать.
+                </p>
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  Читать далее
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-12">
+              <Icon name="BookOpen" size={20} className="mr-2" />
+              Перейти в блог
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Contacts Section */}
       <section id="contacts" className="py-16 px-4 bg-muted/30">
