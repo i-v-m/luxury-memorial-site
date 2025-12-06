@@ -446,12 +446,12 @@ export default function Index() {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 to-green-600"></div>
                 <CardContent className="p-10 text-center">
-                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Icon name="FileSignature" size={40} className="text-blue-600" />
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="FileSignature" size={40} className="text-green-600" />
                   </div>
-                  <div className="text-6xl font-bold text-blue-600 mb-3">50%</div>
+                  <div className="text-6xl font-bold text-green-600 mb-3">50%</div>
                   <h4 className="font-heading text-2xl font-bold mb-4">Предоплата</h4>
                   <p className="text-lg text-muted-foreground">
                     При подписании договора и утверждении эскиза
@@ -529,12 +529,12 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
+            <div className="mt-8 bg-green-50 border border-green-200 rounded-xl p-6">
               <div className="flex items-start gap-4">
-                <Icon name="Info" size={24} className="text-blue-600 flex-shrink-0 mt-1" />
+                <Icon name="Info" size={24} className="text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h5 className="font-semibold text-blue-900 mb-2">Гарантии безопасности</h5>
-                  <p className="text-blue-800">
+                  <h5 className="font-semibold text-green-900 mb-2">Гарантии безопасности</h5>
+                  <p className="text-green-800">
                     Все платежи осуществляются по официальному договору. Мы предоставляем полный пакет документов: договор, 
                     смету, кассовые чеки и акт выполненных работ. Ваши средства защищены.
                   </p>
