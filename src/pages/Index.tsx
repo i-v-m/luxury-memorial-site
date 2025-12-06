@@ -435,6 +435,130 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Payment Order Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="font-heading text-4xl font-bold mb-4">Порядок оплаты памятника</h3>
+            <p className="text-xl text-muted-foreground">Прозрачная и удобная схема оплаты</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="FileSignature" size={32} className="text-blue-600" />
+                  </div>
+                  <div className="text-5xl font-bold text-blue-600 mb-2">50%</div>
+                  <h4 className="font-heading text-xl font-bold mb-3">Предоплата</h4>
+                  <p className="text-muted-foreground">
+                    При подписании договора и утверждении эскиза
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 to-green-600"></div>
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="Hammer" size={32} className="text-green-600" />
+                  </div>
+                  <div className="text-5xl font-bold text-green-600 mb-2">25%</div>
+                  <h4 className="font-heading text-xl font-bold mb-3">Промежуточный платёж</h4>
+                  <p className="text-muted-foreground">
+                    После завершения изготовления памятника
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-purple-600"></div>
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name="CheckCircle2" size={32} className="text-purple-600" />
+                  </div>
+                  <div className="text-5xl font-bold text-purple-600 mb-2">25%</div>
+                  <h4 className="font-heading text-xl font-bold mb-3">Окончательный расчёт</h4>
+                  <p className="text-muted-foreground">
+                    После установки и приёмки работ
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="bg-gradient-to-br from-slate-50 to-white border-2">
+              <CardContent className="p-8">
+                <h4 className="font-heading text-2xl font-bold mb-6 text-center">Способы оплаты</h4>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="CreditCard" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Банковские карты</h5>
+                      <p className="text-sm text-muted-foreground">
+                        Visa, MasterCard, МИР — безопасные онлайн-платежи
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Building2" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Банковский перевод</h5>
+                      <p className="text-sm text-muted-foreground">
+                        Для юридических лиц и индивидуальных предпринимателей
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Wallet" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Наличный расчёт</h5>
+                      <p className="text-sm text-muted-foreground">
+                        Оплата в офисе компании с выдачей кассового чека
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Percent" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Рассрочка</h5>
+                      <p className="text-sm text-muted-foreground">
+                        Возможность оформления беспроцентной рассрочки на 6 месяцев
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
+              <div className="flex items-start gap-4">
+                <Icon name="Info" size={24} className="text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h5 className="font-semibold text-blue-900 mb-2">Гарантии безопасности</h5>
+                  <p className="text-blue-800">
+                    Все платежи осуществляются по официальному договору. Мы предоставляем полный пакет документов: договор, 
+                    смету, кассовые чеки и акт выполненных работ. Ваши средства защищены.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-16 px-4">
         <div className="container mx-auto">
