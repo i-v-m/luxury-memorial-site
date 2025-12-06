@@ -64,8 +64,8 @@ export default function ProductGrid({
           {/* Results header */}
           <div className="flex flex-wrap items-center justify-between mb-6 gap-4">
             <div className="flex items-center space-x-4">
-              <h2 className="font-heading text-2xl font-semibold">
-                Найдено: {monuments.length} памятников
+              <h2 className="font-heading text-xl font-semibold text-muted-foreground">
+                Страница 1 из 1 (Количество товаров: {monuments.length} шт.)
               </h2>
             </div>
             <Select defaultValue="popular">
