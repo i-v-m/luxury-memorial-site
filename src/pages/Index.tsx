@@ -419,19 +419,31 @@ export default function Index() {
             <p className="text-xl text-muted-foreground">Примеры наших лучших проектов</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {monuments.map((monument, index) => (
-              <div key={monument.id} className="aspect-square bg-muted rounded-xl overflow-hidden">
-                <img 
-                  src={monument.image}
-                  alt={monument.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-4">
+              {monuments.map((monument) => (
+                <CarouselItem key={monument.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="aspect-square bg-muted rounded-xl overflow-hidden">
+                    <img 
+                      src={monument.image}
+                      alt={monument.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
 
