@@ -1,4 +1,4 @@
-import { lazy, Suspense, memo } from 'react';
+import { lazy, Suspense, memo, useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,6 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 // Lazy loading для компонентов
@@ -70,6 +71,20 @@ MonumentCard.displayName = 'MonumentCard';
 ServiceCard.displayName = 'ServiceCard';
 
 export default function Index() {
+  const [reviewsApi, setReviewsApi] = useState<CarouselApi>();
+  const [currentReview, setCurrentReview] = useState(0);
+  const [reviewsCount, setReviewsCount] = useState(0);
+
+  useEffect(() => {
+    if (!reviewsApi) return;
+
+    setReviewsCount(reviewsApi.scrollSnapList().length);
+    setCurrentReview(reviewsApi.selectedScrollSnap());
+
+    reviewsApi.on('select', () => {
+      setCurrentReview(reviewsApi.selectedScrollSnap());
+    });
+  }, [reviewsApi]);
 
   // Оптимизированные данные
   const monuments = [
@@ -502,7 +517,8 @@ export default function Index() {
               align: "start",
               loop: true,
             }}
-            className="w-full max-w-7xl mx-auto mb-12"
+            setApi={setReviewsApi}
+            className="w-full max-w-7xl mx-auto mb-8"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {[
@@ -558,6 +574,22 @@ export default function Index() {
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
           </Carousel>
+
+          {/* Dots Navigation */}
+          <div className="flex justify-center gap-2 mb-12">
+            {Array.from({ length: reviewsCount }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => reviewsApi?.scrollTo(index)}
+                className={`h-2.5 rounded-full transition-all ${
+                  index === currentReview
+                    ? 'w-8 bg-primary'
+                    : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+                }`}
+                aria-label={`Перейти к отзыву ${index + 1}`}
+              />
+            ))}
+          </div>
 
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
