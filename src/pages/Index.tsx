@@ -506,38 +506,36 @@ export default function Index() {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {[
-                { name: "Анна М.", date: "15 ноября 2024", text: "Очень довольна качеством памятника. Мастера выполнили работу на высоком уровне.", avatar: "А" },
-                { name: "Дмитрий П.", date: "8 ноября 2024", text: "Заказывали семейный комплекс из красного гранита. Результат превзошёл ожидания.", avatar: "Д" },
-                { name: "Елена В.", date: "2 ноября 2024", text: "Спасибо за терпение в такой трудный момент. Специалисты очень деликатно всё объяснили.", avatar: "Е" },
-                { name: "Сергей К.", date: "28 октября 2024", text: "Профессиональный подход на всех этапах. От эскиза до установки всё сделано идеально.", avatar: "С" },
-                { name: "Ольга Т.", date: "22 октября 2024", text: "Благодарю за оперативность и внимание к деталям. Памятник получился очень красивым.", avatar: "О" },
-                { name: "Виктор Н.", date: "15 октября 2024", text: "Качественная работа за разумные деньги. Рекомендую всем своим знакомым.", avatar: "В" }
+                { name: "Анна М.", date: "15 ноября 2024", text: "Очень довольна качеством памятника. Мастера выполнили работу на высоком уровне. Все этапы изготовления были выполнены точно в срок, а результат превзошёл все наши ожидания. Особенно хочу отметить внимательное отношение менеджеров и профессионализм мастеров.", avatar: "А" },
+                { name: "Дмитрий П.", date: "8 ноября 2024", text: "Заказывали семейный комплекс из красного гранита. Результат превзошёл ожидания. Качество обработки камня на высочайшем уровне, гравировка портрета выполнена очень точно и красиво. Установка прошла быстро и аккуратно. Рекомендую эту компанию всем, кто ищет качественную работу.", avatar: "Д" },
+                { name: "Елена В.", date: "2 ноября 2024", text: "Спасибо за терпение в такой трудный момент. Специалисты очень деликатно всё объяснили и помогли с выбором. Учли все наши пожелания, предложили несколько вариантов дизайна. Памятник получился именно таким, как мы хотели. Очень благодарна за чуткое отношение.", avatar: "Е" },
+                { name: "Сергей К.", date: "28 октября 2024", text: "Профессиональный подход на всех этапах. От эскиза до установки всё сделано идеально. Порадовало качество материалов и точность работы. Мастера учли все детали, которые мы обсуждали. Сроки были соблюдены, цена осталась такой же, как договаривались изначально.", avatar: "С" },
+                { name: "Ольга Т.", date: "22 октября 2024", text: "Благодарю за оперативность и внимание к деталям. Памятник получился очень красивым и достойным. Особенно впечатлила работа художника-гравёра - портрет получился живым и узнаваемым. Установили аккуратно, убрали за собой. Очень довольна выбором этой компании.", avatar: "О" },
+                { name: "Виктор Н.", date: "15 октября 2024", text: "Качественная работа за разумные деньги. Рекомендую всем своим знакомым. Обращался в несколько компаний, здесь предложили лучшее соотношение цены и качества. Материал использовали отличный, работу выполнили быстро. Гарантию дали на 10 лет, что очень важно.", avatar: "В" }
               ].map((review, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/3">
                   <Card className="bg-white shadow-md border h-full">
                     <CardContent className="p-6 flex flex-col h-full">
-                      {/* Stars */}
-                      <div className="flex gap-1 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-yellow-400" />
-                        ))}
+                      {/* Author Info and Stars */}
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                          {review.avatar}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-bold text-lg mb-1">{review.name}</h4>
+                          <p className="text-sm text-muted-foreground mb-2">{review.date}</p>
+                          <div className="flex gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <Icon key={i} name="Star" size={18} className="text-yellow-400 fill-yellow-400" />
+                            ))}
+                          </div>
+                        </div>
                       </div>
                       
                       {/* Review Text */}
-                      <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
+                      <p className="text-slate-700 text-base leading-relaxed">
                         {review.text}
                       </p>
-                      
-                      {/* Author Info */}
-                      <div className="flex items-center gap-3 pt-4 border-t">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                          {review.avatar}
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-base">{review.name}</h4>
-                          <p className="text-sm text-muted-foreground">{review.date}</p>
-                        </div>
-                      </div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
