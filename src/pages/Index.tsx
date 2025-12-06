@@ -336,6 +336,38 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Discount Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-emerald-100">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Side - Text and CTA */}
+            <div className="space-y-6">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                ПОЛУЧИТЕ СКИДКУ 15%<br />
+                <span className="text-green-600">НА ДОСТАВКУ И УСТАНОВКУ</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Оставьте заявку и мы закрепим за вами скидку
+              </p>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 h-auto">
+                <Icon name="Gift" size={20} className="mr-2" />
+                Оставить заявку
+              </Button>
+            </div>
+
+            {/* Right Side - Image */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://cdn.poehali.dev/projects/08048ba4-919f-4578-8945-c83f39de97ee/files/7eb347b4-322d-4c1a-8846-16614639960f.jpg"
+                alt="Доставка и установка памятников"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto">
