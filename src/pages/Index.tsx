@@ -844,23 +844,10 @@ export default function Index() {
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                  <Icon name="Calendar" size={16} />
-                  <span>15 ноября 2024</span>
-                </div>
                 <CardTitle className="font-heading text-xl">
                   Как выбрать материал для памятника
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Подробное руководство по выбору гранита, мрамора и других материалов. Сравнение характеристик и советы экспертов.
-                </p>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
-                  Читать далее
-                  <Icon name="ArrowRight" size={16} className="ml-2" />
-                </Button>
-              </CardContent>
             </Card>
 
             <Card className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
@@ -873,23 +860,10 @@ export default function Index() {
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                  <Icon name="Calendar" size={16} />
-                  <span>10 ноября 2024</span>
-                </div>
                 <CardTitle className="font-heading text-xl">
                   Этапы изготовления памятника
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  От эскиза до установки: полный цикл работ с фотографиями и пояснениями. Узнайте, как создаётся ваш памятник.
-                </p>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
-                  Читать далее
-                  <Icon name="ArrowRight" size={16} className="ml-2" />
-                </Button>
-              </CardContent>
             </Card>
 
             <Card className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
@@ -902,23 +876,10 @@ export default function Index() {
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                  <Icon name="Calendar" size={16} />
-                  <span>5 ноября 2024</span>
-                </div>
                 <CardTitle className="font-heading text-xl">
                   Правильный уход за памятником
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Рекомендации по уходу и сохранению внешнего вида. Какие средства использовать и чего следует избегать.
-                </p>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
-                  Читать далее
-                  <Icon name="ArrowRight" size={16} className="ml-2" />
-                </Button>
-              </CardContent>
             </Card>
           </div>
 
