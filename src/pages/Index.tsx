@@ -489,7 +489,7 @@ export default function Index() {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {materials.map((material, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                   <Card className="h-full hover:shadow-xl transition-shadow">
                     <CardContent className="p-4">
                       <div className="aspect-square overflow-hidden rounded-lg mb-4">
@@ -507,8 +507,8 @@ export default function Index() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </section>
