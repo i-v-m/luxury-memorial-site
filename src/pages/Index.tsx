@@ -78,6 +78,17 @@ export default function Index() {
     { id: 3, title: 'Бронзовая мемориальная плита', price: 'от 25 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
   ];
 
+  const catalogProducts = [
+    { id: 1, title: 'Памятник из габбро-диабаза', price: 'от 52 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 2, title: 'Семейный комплекс', price: 'от 120 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+    { id: 3, title: 'Памятник с крестом', price: 'от 48 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
+    { id: 4, title: 'Элитный гранитный памятник', price: 'от 95 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 5, title: 'Мраморный памятник', price: 'от 65 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+    { id: 6, title: 'Детский памятник', price: 'от 35 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
+    { id: 7, title: 'Памятник с цветником', price: 'от 58 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 8, title: 'Гранитный комплекс с оградой', price: 'от 150 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+  ];
+
   const services = [
     { title: 'Изготовление памятников', description: 'Индивидуальное изготовление из премиальных материалов', icon: 'Hammer' },
     { title: 'Установка и монтаж', description: 'Профессиональная установка с гарантией качества', icon: 'Settings' },
@@ -289,6 +300,44 @@ export default function Index() {
                 Позвонить
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Catalog Products Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="font-heading text-4xl font-bold mb-4">Популярные памятники</h3>
+            <p className="text-xl text-muted-foreground">Готовые решения из нашего каталога</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {catalogProducts.map((product) => (
+              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
+                <div className="aspect-[3/4] overflow-hidden bg-muted">
+                  <img 
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <CardHeader className="p-3 md:p-4">
+                  <CardTitle className="font-heading text-sm md:text-base line-clamp-2">{product.title}</CardTitle>
+                  <CardDescription className="text-base md:text-lg font-semibold text-primary">
+                    {product.price}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-12">
+              <Icon name="Grid3x3" size={20} className="mr-2" />
+              Перейти в каталог
+            </Button>
           </div>
         </div>
       </section>
