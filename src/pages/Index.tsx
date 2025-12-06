@@ -79,14 +79,14 @@ export default function Index() {
   ];
 
   const catalogProducts = [
-    { id: 1, title: 'Памятник из габбро-диабаза', price: 'от 52 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
-    { id: 2, title: 'Семейный комплекс', price: 'от 120 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
-    { id: 3, title: 'Памятник с крестом', price: 'от 48 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
-    { id: 4, title: 'Элитный гранитный памятник', price: 'от 95 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
-    { id: 5, title: 'Мраморный памятник', price: 'от 65 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
-    { id: 6, title: 'Детский памятник', price: 'от 35 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
-    { id: 7, title: 'Памятник с цветником', price: 'от 58 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
-    { id: 8, title: 'Гранитный комплекс с оградой', price: 'от 150 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+    { id: 1, title: 'Памятник из габбро-диабаза', oldPrice: 'от 65 000 ₽', price: 'от 52 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 2, title: 'Семейный комплекс', oldPrice: 'от 150 000 ₽', price: 'от 120 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+    { id: 3, title: 'Памятник с крестом', oldPrice: 'от 60 000 ₽', price: 'от 48 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
+    { id: 4, title: 'Элитный гранитный памятник', oldPrice: 'от 115 000 ₽', price: 'от 95 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 5, title: 'Мраморный памятник', oldPrice: 'от 80 000 ₽', price: 'от 65 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
+    { id: 6, title: 'Детский памятник', oldPrice: 'от 42 000 ₽', price: 'от 35 000 ₽', image: '/img/2eee8912-7f02-4a25-ae89-caf7d0d5e3ee.jpg' },
+    { id: 7, title: 'Памятник с цветником', oldPrice: 'от 72 000 ₽', price: 'от 58 000 ₽', image: '/img/2f39360b-4fa5-4b2a-8359-d7b41b051bb0.jpg' },
+    { id: 8, title: 'Гранитный комплекс с оградой', oldPrice: 'от 185 000 ₽', price: 'от 150 000 ₽', image: '/img/bd3b35cb-7942-470f-96ca-243f4defe519.jpg' },
   ];
 
   const services = [
@@ -315,19 +315,27 @@ export default function Index() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
             {catalogProducts.map((product) => (
               <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer">
-                <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <div className="aspect-[3/4] overflow-hidden bg-muted relative">
                   <img 
                     src={product.image}
                     alt={product.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
+                  <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    АКЦИЯ
+                  </div>
                 </div>
                 <CardHeader className="p-3 md:p-4">
                   <CardTitle className="font-heading text-sm md:text-base line-clamp-2">{product.title}</CardTitle>
-                  <CardDescription className="text-base md:text-lg font-semibold text-primary">
-                    {product.price}
-                  </CardDescription>
+                  <div className="space-y-1">
+                    <div className="text-xs md:text-sm text-muted-foreground line-through">
+                      {product.oldPrice}
+                    </div>
+                    <div className="text-base md:text-lg font-bold text-green-600">
+                      {product.price}
+                    </div>
+                  </div>
                 </CardHeader>
               </Card>
             ))}
