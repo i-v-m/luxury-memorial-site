@@ -27,6 +27,7 @@ import ScalpelLettering from "./pages/ScalpelLettering";
 import MoscowRegion from "./pages/MoscowRegion";
 import Cemeteries from "./pages/Cemeteries";
 import Reviews from "./pages/Reviews";
+import Certificates from "./pages/Certificates";
 import Error404 from "./pages/Error404";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/regions/moscow-region" element={<MoscowRegion />} />
             <Route path="/cemeteries" element={<Cemeteries />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/certificates" element={<Certificates />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<Error404 />} />
           </Routes>
