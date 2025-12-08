@@ -82,7 +82,7 @@ export default function ProductGrid({
           </div>
 
           {/* Products grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-2 sm:px-0">
             {monuments.map(monument => (
               <ProductCard
                 key={monument.id}

@@ -39,14 +39,14 @@ const MonumentCard = memo(({ monument }: { monument: any }) => (
         decoding="async"
       />
     </div>
-    <CardHeader>
-      <CardTitle className="font-heading">{monument.title}</CardTitle>
-      <CardDescription className="text-lg font-semibold text-primary">
+    <CardHeader className="p-3 md:p-6 pb-2">
+      <CardTitle className="font-heading text-sm sm:text-base md:text-lg line-clamp-2">{monument.title}</CardTitle>
+      <CardDescription className="text-base sm:text-lg md:text-xl font-semibold text-primary mt-1">
         {monument.price}
       </CardDescription>
     </CardHeader>
-    <CardContent>
-      <Button className="w-full">Подробнее</Button>
+    <CardContent className="p-3 md:p-6 pt-0">
+      <Button className="w-full h-9 text-sm md:h-10 md:text-base">Подробнее</Button>
     </CardContent>
   </Card>
 ));
@@ -327,7 +327,7 @@ export default function Index() {
             <p className="text-xl text-muted-foreground">Готовые решения из нашего каталога</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 px-2 sm:px-0">
             {catalogProducts.map((product) => (
               <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow group">
                 <div className="relative aspect-square overflow-hidden">
@@ -337,49 +337,51 @@ export default function Index() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 right-3">
-                    <div className="bg-red-500 hover:bg-red-600 text-white text-xs font-medium px-2.5 py-1 rounded">
+                  <div className="absolute top-2 md:top-3 right-2 md:right-3">
+                    <div className="bg-red-500 hover:bg-red-600 text-white text-xs font-medium px-2 py-0.5 md:px-2.5 md:py-1 rounded">
                       Скидка
                     </div>
                   </div>
                 </div>
                 
-                <CardHeader className="pb-2">
-                  <CardTitle className="font-heading text-lg line-clamp-1">
+                <CardHeader className="p-2 sm:p-3 md:p-6 pb-2">
+                  <CardTitle className="font-heading text-xs sm:text-sm md:text-lg line-clamp-2">
                     {product.title}
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-2 md:space-y-3 p-2 sm:p-3 md:p-6 pt-0">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl font-bold text-primary">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2">
+                      <span className="text-sm sm:text-base md:text-xl font-bold text-primary">
                         {product.price}
                       </span>
-                      <span className="text-sm line-through text-muted-foreground">
+                      <span className="text-[10px] sm:text-xs md:text-sm line-through text-muted-foreground">
                         {product.oldPrice}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
+                  <div className="flex gap-1 sm:gap-2">
                     <Button 
                       size="sm"
-                      className="flex-1 bg-primary hover:bg-primary/90"
+                      className="flex-1 bg-primary hover:bg-primary/90 h-7 sm:h-8 md:h-9 text-[10px] sm:text-xs md:text-sm px-2"
                     >
                       Подробнее
                     </Button>
                     <Button 
                       variant="outline" 
                       size="icon"
+                      className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9"
                     >
-                      <Icon name="Heart" size={18} />
+                      <Icon name="Heart" size={14} className="sm:size-16 md:size-18" />
                     </Button>
                     <Button 
                       variant="outline" 
                       size="icon"
+                      className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9"
                     >
-                      <Icon name="BarChart3" size={18} />
+                      <Icon name="BarChart3" size={14} className="sm:size-16 md:size-18" />
                     </Button>
                   </div>
                 </CardContent>
