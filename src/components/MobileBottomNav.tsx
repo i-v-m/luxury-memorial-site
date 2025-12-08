@@ -24,15 +24,38 @@ const catalogSections = [
           { title: 'Эксклюзивные', href: '/catalog?form=exclusive' },
           { title: 'Сердце', href: '/catalog?form=heart' },
           { title: 'С Крестом', href: '/catalog?form=cross' },
+          { title: 'Кресты из гранита', href: '/catalog?form=granite-cross' },
+          { title: 'Цветы', href: '/catalog?form=flowers' },
+          { title: 'Деревья (Берёза)', href: '/catalog?form=trees' },
+          { title: 'Ангел', href: '/catalog?form=angel' },
+          { title: 'Птицы (Лебеди, голуби)', href: '/catalog?form=birds' },
+          { title: 'Скорбящая', href: '/catalog?form=mourning' },
+          { title: 'Свеча', href: '/catalog?form=candle' },
+          { title: 'Арка', href: '/catalog?form=arch' },
+          { title: 'Составные', href: '/catalog?form=composite' },
         ]
       },
       {
         title: 'Материал',
         items: [
-          { title: 'Гранит', href: '/catalog?material=granite' },
-          { title: 'Мрамор', href: '/catalog?material=marble' },
+          { title: 'Памятники из гранита', href: '/catalog?material=granite' },
+          { title: 'Памятники из мрамора', href: '/catalog?material=marble' },
           { title: 'Габбро Диабаз', href: '/catalog?material=gabbro-diabaz' },
+          { title: 'Мрамор Коелга', href: '/catalog?material=marble-koelga' },
+          { title: 'Капустянский', href: '/catalog?material=kapustyansky' },
+          { title: 'Дымовский', href: '/catalog?material=dymovsky' },
           { title: 'Мансуровский', href: '/catalog?material=mansurovsky' },
+          { title: 'Сопка Бунтина', href: '/catalog?material=sopka-buntina' },
+          { title: 'Балтик Грин', href: '/catalog?material=baltic-green' },
+          { title: 'Гранатовый амфиболит', href: '/catalog?material=garnet-amphibolite' },
+          { title: 'Змеевик', href: '/catalog?material=serpentine' },
+          { title: 'Лабрадорит', href: '/catalog?material=labradorite' },
+          { title: 'Лезниковский', href: '/catalog?material=leznikovsky' },
+          { title: 'Блю пёрл', href: '/catalog?material=blue-pearl' },
+          { title: 'Визаж Блю', href: '/catalog?material=visage-blue' },
+          { title: 'Куру Грей', href: '/catalog?material=kuru-grey' },
+          { title: 'Индиан Аврора', href: '/catalog?material=indian-aurora' },
+          { title: 'Сюскюянсаари', href: '/catalog?material=syuskyuansaari' },
         ]
       },
       {
@@ -40,9 +63,39 @@ const catalogSections = [
         items: [
           { title: 'Военный (СВО)', href: '/catalog?for=military-svo' },
           { title: 'Семейный', href: '/catalog?for=family' },
+          { title: 'Европейские', href: '/catalog?for=european' },
           { title: 'Женский', href: '/catalog?for=women' },
+          { title: 'Православный', href: '/catalog?for=orthodox' },
           { title: 'Мужской', href: '/catalog?for=men' },
+          { title: 'Мусульманский', href: '/catalog?for=muslim' },
+          { title: 'Родителям', href: '/catalog?for=parents' },
+          { title: 'Маме', href: '/catalog?for=mother' },
+          { title: 'Католический', href: '/catalog?for=catholic' },
+          { title: 'Отцу', href: '/catalog?for=father' },
           { title: 'Детский', href: '/catalog?for=children' },
+          { title: 'Армянские', href: '/catalog?for=armenian' },
+          { title: 'Двойной', href: '/catalog?for=double' },
+          { title: 'Еврейские', href: '/catalog?for=jewish' },
+        ]
+      },
+      {
+        title: 'Цвет',
+        items: [
+          { title: 'Чёрные', href: '/catalog?color=black' },
+          { title: 'Белые', href: '/catalog?color=white' },
+          { title: 'Зелёные', href: '/catalog?color=green' },
+          { title: 'Красные', href: '/catalog?color=red' },
+          { title: 'Серые', href: '/catalog?color=gray' },
+          { title: 'Коричневые', href: '/catalog?color=brown' },
+          { title: 'Синие', href: '/catalog?color=blue' },
+          { title: 'Комбинированные', href: '/catalog?color=combined' },
+        ]
+      },
+      {
+        title: 'Цена',
+        items: [
+          { title: 'Недорогие', href: '/catalog?price=budget' },
+          { title: 'Элитные', href: '/catalog?price=elite' },
         ]
       }
     ]
@@ -55,9 +108,21 @@ const catalogSections = [
         title: 'Типы комплексов',
         items: [
           { title: 'Мемориальные комплексы', href: '/catalog?type=memorial' },
+          { title: 'Комбинированный гранит', href: '/catalog?type=combined-granite' },
           { title: 'С оградой', href: '/catalog?type=with-fence' },
+          { title: 'Со стеклом', href: '/catalog?type=with-glass' },
           { title: 'С лавочкой', href: '/catalog?type=with-bench' },
           { title: 'Православные', href: '/catalog?type=orthodox' },
+          { title: 'Европейские', href: '/catalog?type=european' },
+        ]
+      },
+      {
+        title: 'По размеру',
+        items: [
+          { title: 'На одного', href: '/catalog?size=single' },
+          { title: 'На двоих', href: '/catalog?size=double' },
+          { title: 'Семейные', href: '/catalog?size=family' },
+          { title: 'Угловые', href: '/catalog?size=corner' },
         ]
       }
     ]
@@ -72,6 +137,7 @@ const catalogSections = [
           { title: 'Гранитная плитка', href: '/catalog?type=granite-tiles' },
           { title: 'Тротуарная плитка', href: '/catalog?type=paving-stones' },
           { title: 'Брусчатка', href: '/catalog?type=cobblestone' },
+          { title: 'Надгробные плиты', href: '/catalog?type=grave-slabs' },
         ]
       },
       {
@@ -79,7 +145,20 @@ const catalogSections = [
         items: [
           { title: 'Кованые ограды', href: '/catalog?type=wrought-fences' },
           { title: 'Цоколь из гранита', href: '/catalog?type=granite-fences' },
+          { title: 'Цоколь из бетона', href: '/catalog?type=concrete-base' },
           { title: 'Бордюр', href: '/catalog?type=border' },
+        ]
+      },
+      {
+        title: 'Декор',
+        items: [
+          { title: 'Столики и лавочки', href: '/catalog?type=furniture' },
+          { title: 'Цветники', href: '/catalog?type=planters' },
+          { title: 'Вазы и лампады', href: '/catalog?type=vases' },
+          { title: 'Шары и балясины', href: '/catalog?type=spheres' },
+          { title: 'Щебень декоративный', href: '/catalog?type=decorative-gravel' },
+          { title: 'Газон', href: '/catalog?type=lawn' },
+          { title: 'Мемориальные доски', href: '/catalog?type=memorial-plaques' },
         ]
       }
     ]
@@ -91,17 +170,46 @@ const catalogSections = [
       {
         title: 'Портреты',
         items: [
-          { title: 'Гравировка портрета', href: '/catalog?type=portrait-engraving' },
-          { title: 'Ручная работа', href: '/catalog?type=portrait-hand' },
+          { title: 'Портреты на камне', href: '/catalog?type=stone-portraits' },
           { title: 'Фотокерамика', href: '/catalog?type=photo-ceramics' },
+          { title: 'Цветные портреты', href: '/catalog?type=color-portraits' },
+          { title: 'Портреты во весь рост', href: '/catalog?type=bw-portraits' },
+          { title: 'Портрет на стекле', href: '/catalog?type=glass-portraits' },
+        ]
+      },
+      {
+        title: 'Гравировка',
+        items: [
+          { title: 'Гравировка текста', href: '/catalog?type=text-engraving' },
+          { title: 'Художественная резьба', href: '/catalog?type=artistic-carving' },
+          { title: 'Эпитафии', href: '/catalog?type=epitaphs' },
+          { title: 'Даты жизни', href: '/catalog?type=life-dates' },
+          { title: 'Кресты', href: '/catalog?type=crosses' },
+          { title: 'Свечи', href: '/catalog?type=candles' },
+          { title: 'Цветы', href: '/catalog?type=flowers' },
+          { title: 'Иконы', href: '/catalog?type=icons' },
+          { title: 'Ангелочки', href: '/catalog?type=angels' },
+          { title: 'Виньетки', href: '/catalog?type=vignettes' },
+          { title: 'Птицы и животные', href: '/catalog?type=birds-animals' },
+          { title: 'Военная тематика', href: '/catalog?type=military' },
+          { title: 'Профессии', href: '/catalog?type=professions' },
+          { title: 'Веточки', href: '/catalog?type=branches' },
+          { title: 'Природа', href: '/catalog?type=nature' },
+          { title: 'Храмы, Церкви, Мечети', href: '/catalog?type=temples' },
+          { title: 'Ислам', href: '/catalog?type=islam' },
+          { title: 'Одежда', href: '/catalog?type=clothing' },
+          { title: 'Рамки', href: '/catalog?type=frames' },
         ]
       },
       {
         title: 'Надписи',
         items: [
-          { title: 'Гравировка ФИО', href: '/catalog?type=fio-engraving' },
-          { title: 'Скарпель', href: '/scalpel-lettering' },
-          { title: 'Золочение букв', href: '/catalog?type=gilding' },
+          { title: 'Бронзовые буквы', href: '/catalog?type=bronze-letters' },
+          { title: 'Скарпель (Рубленные буквы)', href: '/scalpel-lettering' },
+          { title: 'Сусальное золото', href: '/gold-leaf' },
+          { title: 'Пескоструй', href: '/catalog?type=sandblasting' },
+          { title: 'Эпитафии', href: '/catalog?type=epitaphs-text' },
+          { title: 'Шрифты', href: '/catalog?type=fonts' },
         ]
       }
     ]
@@ -110,14 +218,44 @@ const catalogSections = [
 
 const infoSections = [
   {
-    title: 'Информация',
+    title: 'Услуги',
     items: [
       { title: 'Как заказать памятник', href: '/how-to-order' },
+      { title: 'Вызов менеджера', href: '/manager-call' },
+      { title: 'Дизайн памятников', href: '/monument-design' },
+      { title: 'Доставка', href: '/delivery' },
+      { title: 'Установка', href: '/installation' },
+      { title: 'Оплата', href: '/payment' },
+    ]
+  },
+  {
+    title: 'О нас',
+    items: [
       { title: 'О компании', href: '/about' },
-      { title: 'Фото наших работ', href: '/portfolio' },
-      { title: 'Доставка и установка', href: '/delivery' },
+      { title: 'Гранитная мастерская', href: '/granite-workshop' },
+      { title: 'Сертификаты', href: '/certificates' },
       { title: 'Гарантии', href: '/warranty' },
+      { title: 'Отзывы клиентов', href: '/reviews' },
+    ]
+  },
+  {
+    title: 'Полезная информация',
+    items: [
       { title: 'Часто задаваемые вопросы', href: '/faq' },
+      { title: 'Фото наших работ', href: '/portfolio' },
+      { title: 'Кладбища Москвы и МО', href: '/cemeteries' },
+      { title: 'Памятники в городах МО', href: '/regions/moscow-region' },
+      { title: 'Сроки изготовления', href: '/production-times' },
+    ]
+  },
+  {
+    title: 'Блог',
+    items: [
+      { title: 'О благоустройстве могил', href: '/blog/grave-improvement' },
+      { title: 'О материалах', href: '/blog/materials' },
+      { title: 'Нормативные документы', href: '/blog/regulations' },
+      { title: 'О кладбищах', href: '/blog/cemeteries' },
+      { title: 'Уход за памятниками', href: '/care-guide' },
     ]
   },
   {
@@ -263,7 +401,7 @@ export default function MobileBottomNav() {
         <div className="grid grid-cols-4 h-16">
           {/* Каталог */}
           <button 
-            onClick={() => setCatalogOpen(true)}
+            onClick={() => setCatalogOpen(!catalogOpen)}
             className="flex flex-col items-center justify-center space-y-1 text-gray-600 hover:text-green-600 active:bg-gray-50"
           >
             <Icon name="Grid3x3" size={22} />
@@ -310,7 +448,7 @@ export default function MobileBottomNav() {
 
           {/* Меню */}
           <button 
-            onClick={() => setMenuOpen(true)}
+            onClick={() => setMenuOpen(!menuOpen)}
             className="flex flex-col items-center justify-center space-y-1 text-gray-600 hover:text-green-600 active:bg-gray-50"
           >
             <Icon name="Menu" size={22} />
