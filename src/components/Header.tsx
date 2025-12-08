@@ -117,7 +117,7 @@ export default function Header() {
   const { state, getCartCount } = useApp();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hidden md:block">
       {/* Top Contact Bar */}
       <div className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
