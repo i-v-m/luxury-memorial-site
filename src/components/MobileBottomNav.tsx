@@ -397,68 +397,71 @@ export default function MobileBottomNav() {
       </div>
 
       {/* Нижняя панель навигации (только мобильная) */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 md:hidden">
-        <div className="grid grid-cols-4 h-16">
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-white to-gray-50 border-t-2 border-green-500/20 md:hidden shadow-lg">
+        <div className="grid grid-cols-3 h-20 px-2">
           {/* Каталог */}
           <button 
             onClick={() => setCatalogOpen(!catalogOpen)}
-            className="flex flex-col items-center justify-center space-y-1 text-gray-600 hover:text-green-600 active:bg-gray-50"
+            className={`flex flex-col items-center justify-center space-y-1.5 rounded-2xl transition-all duration-200 ${
+              catalogOpen 
+                ? 'bg-green-500 text-white scale-95' 
+                : 'text-gray-600 hover:bg-green-50 hover:text-green-600'
+            }`}
           >
-            <Icon name="Grid3x3" size={22} />
-            <span className="text-xs">Каталог</span>
+            <div className={`p-2 rounded-xl transition-all ${
+              catalogOpen ? 'bg-white/20' : 'bg-transparent'
+            }`}>
+              <Icon name="Grid3x3" size={24} />
+            </div>
+            <span className="text-xs font-medium">Каталог</span>
           </button>
 
           {/* Корзина */}
           <Link
             to="/cart"
-            className={`flex flex-col items-center justify-center space-y-1 relative ${
-              location.pathname === '/cart' ? 'text-green-600' : 'text-gray-600'
+            className={`flex flex-col items-center justify-center space-y-1.5 rounded-2xl transition-all duration-200 relative ${
+              location.pathname === '/cart'
+                ? 'bg-green-500 text-white scale-95'
+                : 'text-gray-600 hover:bg-green-50 hover:text-green-600'
             }`}
           >
-            <Icon name="ShoppingBasket" size={22} />
-            <span className="text-xs">Корзина</span>
-            {getCartCount() > 0 && (
-              <Badge 
-                variant="default" 
-                className="absolute top-1 right-1/4 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-green-500 text-white"
-              >
-                {getCartCount()}
-              </Badge>
-            )}
-          </Link>
-
-          {/* Избранное */}
-          <Link
-            to="/favorites"
-            className={`flex flex-col items-center justify-center space-y-1 relative ${
-              location.pathname === '/favorites' ? 'text-green-600' : 'text-gray-600'
-            }`}
-          >
-            <Icon name="Heart" size={22} />
-            <span className="text-xs">Избранное</span>
-            {state.favorites.length > 0 && (
-              <Badge 
-                variant="default" 
-                className="absolute top-1 right-1/4 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-pink-500 text-white"
-              >
-                {state.favorites.length}
-              </Badge>
-            )}
+            <div className={`p-2 rounded-xl transition-all relative ${
+              location.pathname === '/cart' ? 'bg-white/20' : 'bg-transparent'
+            }`}>
+              <Icon name="ShoppingBasket" size={24} />
+              {getCartCount() > 0 && (
+                <Badge 
+                  variant="default" 
+                  className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-[10px] bg-red-500 text-white border-2 border-white animate-pulse"
+                >
+                  {getCartCount()}
+                </Badge>
+              )}
+            </div>
+            <span className="text-xs font-medium">Корзина</span>
           </Link>
 
           {/* Меню */}
           <button 
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col items-center justify-center space-y-1 text-gray-600 hover:text-green-600 active:bg-gray-50"
+            className={`flex flex-col items-center justify-center space-y-1.5 rounded-2xl transition-all duration-200 ${
+              menuOpen 
+                ? 'bg-green-500 text-white scale-95' 
+                : 'text-gray-600 hover:bg-green-50 hover:text-green-600'
+            }`}
           >
-            <Icon name="Menu" size={22} />
-            <span className="text-xs">Меню</span>
+            <div className={`p-2 rounded-xl transition-all ${
+              menuOpen ? 'bg-white/20' : 'bg-transparent'
+            }`}>
+              <Icon name="Menu" size={24} />
+            </div>
+            <span className="text-xs font-medium">Меню</span>
           </button>
         </div>
       </div>
 
       {/* Отступ снизу для контента (только мобильная) */}
-      <div className="h-16 md:hidden" />
+      <div className="h-20 md:hidden" />
     </>
   );
 }

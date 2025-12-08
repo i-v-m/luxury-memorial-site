@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
       <MobileTopNav />
       <Header />
       <Breadcrumbs />
-      <main className="flex-1 pb-16 md:pb-0">
+      <main className="flex-1 pb-20 md:pb-0">
         {children}
       </main>
       <Footer />
