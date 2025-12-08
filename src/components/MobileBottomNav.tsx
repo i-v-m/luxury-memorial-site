@@ -319,7 +319,7 @@ export default function MobileBottomNav() {
         
         <div className="overflow-y-auto h-[calc(100%-64px)] p-4">
           {catalogSections.map((section, idx) => (
-            <Collapsible key={idx} className="mb-2">
+            <Collapsible key={idx} className="mb-2" defaultOpen>
               <CollapsibleTrigger className="flex items-center justify-between w-full p-3 rounded-lg hover:bg-gray-50 transition-colors">
                 <div className="flex items-center space-x-3">
                   <Icon name={section.icon as any} size={20} className="text-green-600" />
