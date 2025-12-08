@@ -46,7 +46,7 @@ const MonumentCard = memo(({ monument }: { monument: any }) => (
       </CardDescription>
     </CardHeader>
     <CardContent className="p-3 md:p-6 pt-0">
-      <Button className="w-full h-9 text-sm md:h-10 md:text-base">Подробнее</Button>
+      <Button className="w-full h-9 text-xs sm:text-sm md:h-10 md:text-base">Подробнее</Button>
     </CardContent>
   </Card>
 ));
@@ -345,7 +345,7 @@ export default function Index() {
                 </div>
                 
                 <CardHeader className="p-2 sm:p-3 md:p-6 pb-2">
-                  <CardTitle className="font-heading text-xs sm:text-sm md:text-lg line-clamp-2">
+                  <CardTitle className="font-heading text-sm sm:text-base md:text-lg line-clamp-2">
                     {product.title}
                   </CardTitle>
                 </CardHeader>
@@ -353,10 +353,10 @@ export default function Index() {
                 <CardContent className="space-y-2 md:space-y-3 p-2 sm:p-3 md:p-6 pt-0">
                   <div className="flex items-center justify-between">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2">
-                      <span className="text-sm sm:text-base md:text-xl font-bold text-primary">
+                      <span className="text-base sm:text-lg md:text-xl font-bold text-primary">
                         {product.price}
                       </span>
-                      <span className="text-[10px] sm:text-xs md:text-sm line-through text-muted-foreground">
+                      <span className="text-xs sm:text-sm md:text-sm line-through text-muted-foreground">
                         {product.oldPrice}
                       </span>
                     </div>
@@ -365,23 +365,23 @@ export default function Index() {
                   <div className="flex gap-1 sm:gap-2">
                     <Button 
                       size="sm"
-                      className="flex-1 bg-primary hover:bg-primary/90 h-7 sm:h-8 md:h-9 text-[10px] sm:text-xs md:text-sm px-2"
+                      className="flex-1 bg-primary hover:bg-primary/90 h-8 sm:h-9 md:h-9 text-xs sm:text-sm md:text-sm px-2"
                     >
                       Подробнее
                     </Button>
                     <Button 
                       variant="outline" 
                       size="icon"
-                      className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9"
+                      className="h-8 w-8 sm:h-9 sm:w-9 md:h-9 md:w-9"
                     >
-                      <Icon name="Heart" size={14} className="sm:size-16 md:size-18" />
+                      <Icon name="Heart" size={16} className="sm:size-18 md:size-18" />
                     </Button>
                     <Button 
                       variant="outline" 
                       size="icon"
-                      className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9"
+                      className="h-8 w-8 sm:h-9 sm:w-9 md:h-9 md:w-9"
                     >
-                      <Icon name="BarChart3" size={14} className="sm:size-16 md:size-18" />
+                      <Icon name="BarChart3" size={16} className="sm:size-18 md:size-18" />
                     </Button>
                   </div>
                 </CardContent>

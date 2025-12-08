@@ -44,7 +44,7 @@ export default function MonumentCard({
       </div>
       
       <CardHeader className="pb-2 p-3 md:p-4">
-        <CardTitle className="font-heading text-base md:text-lg line-clamp-2">
+        <CardTitle className="font-heading text-sm sm:text-base md:text-lg line-clamp-2">
           {monument.title}
         </CardTitle>
       </CardHeader>
@@ -52,9 +52,9 @@ export default function MonumentCard({
       <CardContent className="space-y-2 md:space-y-3 p-3 md:p-4 pt-0">
         <div className="flex items-center justify-between">
           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-            <span className="text-lg md:text-xl font-bold text-primary">{monument.price}</span>
+            <span className="text-base sm:text-lg md:text-xl font-bold text-primary">{monument.price}</span>
             {monument.originalPrice && (
-              <span className="text-xs md:text-sm line-through text-muted-foreground">
+              <span className="text-xs sm:text-sm md:text-sm line-through text-muted-foreground">
                 {monument.originalPrice}
               </span>
             )}
@@ -64,7 +64,7 @@ export default function MonumentCard({
         <div className="flex gap-1 md:gap-2">
           <Button 
             size="sm"
-            className="flex-1 bg-primary hover:bg-primary/90 h-8 md:h-9 text-xs md:text-sm px-2 md:px-3"
+            className="flex-1 bg-primary hover:bg-primary/90 h-8 sm:h-9 md:h-9 text-xs sm:text-sm md:text-sm px-2 md:px-3"
             asChild
           >
             <Link to={`/product/${monument.id}`}>
@@ -75,21 +75,21 @@ export default function MonumentCard({
             variant="outline" 
             size="icon"
             onClick={() => onAddToFavorites(monument)}
-            className={`h-8 w-8 md:h-9 md:w-9 ${isInFavorites(monument.id) ? "text-red-500" : ""}`}
+            className={`h-8 w-8 sm:h-9 sm:w-9 md:h-9 md:w-9 ${isInFavorites(monument.id) ? "text-red-500" : ""}`}
           >
             <Icon 
               name="Heart" 
               size={16} 
-              className={`md:size-18 ${isInFavorites(monument.id) ? "fill-current" : ""}`} 
+              className={`sm:size-18 md:size-18 ${isInFavorites(monument.id) ? "fill-current" : ""}`} 
             />
           </Button>
           <Button 
             variant="outline" 
             size="icon"
             onClick={() => onAddToComparison(monument)}
-            className={`h-8 w-8 md:h-9 md:w-9 ${isInComparison(monument.id) ? "text-blue-500" : ""}`}
+            className={`h-8 w-8 sm:h-9 sm:w-9 md:h-9 md:w-9 ${isInComparison(monument.id) ? "text-blue-500" : ""}`}
           >
-            <Icon name="BarChart3" size={16} className="md:size-18" />
+            <Icon name="BarChart3" size={16} className="sm:size-18 md:size-18" />
           </Button>
         </div>
       </CardContent>
