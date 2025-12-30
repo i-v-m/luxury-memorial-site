@@ -827,18 +827,7 @@ export default function Index() {
                 Сколько времени занимает изготовление памятника?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
-                <p className="mb-4">Сроки изготовления зависят от сложности проекта:</p>
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <div className="bg-muted/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Стандартные памятники</h4>
-                    <p className="text-sm">14-21 рабочий день</p>
-                  </div>
-                  <div className="bg-muted/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Сложные проекты</h4>
-                    <p className="text-sm">25-40 рабочих дней</p>
-                  </div>
-                </div>
-                <p>В сезон высокой загруженности (весна-лето) сроки могут увеличиваться до 30-45 дней. Точные сроки сообщаем при заказе.</p>
+                <p>Стандартные памятники изготавливаются за 14-21 рабочий день. Сложные проекты требуют 25-40 рабочих дней. В сезон высокой загруженности (весна-лето) сроки могут увеличиваться до 30-45 дней. Точные сроки сообщаем при заказе.</p>
               </AccordionContent>
             </AccordionItem>
 
@@ -847,33 +836,7 @@ export default function Index() {
                 Как происходит гравировка портрета на памятнике?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
-                <p className="mb-4">Мы предлагаем два способа гравировки портретов:</p>
-                <div className="space-y-4">
-                  <div className="border border-border rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Icon name="Zap" size={16} className="text-blue-500" />
-                      Лазерная гравировка
-                    </h4>
-                    <p className="text-sm mb-2">Современная технология с высокой детализацией</p>
-                    <ul className="text-sm space-y-1 list-disc list-inside">
-                      <li>Точная передача деталей и полутонов</li>
-                      <li>Долговечность изображения</li>
-                      <li>Быстрое выполнение (2-3 дня)</li>
-                    </ul>
-                  </div>
-                  <div className="border border-border rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Icon name="Paintbrush" size={16} className="text-purple-500" />
-                      Ручная гравировка
-                    </h4>
-                    <p className="text-sm mb-2">Художественная работа мастера-гравёра</p>
-                    <ul className="text-sm space-y-1 list-disc list-inside">
-                      <li>Уникальность каждого портрета</li>
-                      <li>Живая, объёмная передача черт</li>
-                      <li>Эксклюзивность исполнения</li>
-                    </ul>
-                  </div>
-                </div>
+                <p>Мы предлагаем два способа гравировки портретов: лазерную и ручную. Лазерная гравировка — современная технология с высокой детализацией, точной передачей деталей и полутонов, долговечностью изображения и быстрым выполнением (2-3 дня). Ручная гравировка — художественная работа мастера-гравёра, которая обеспечивает уникальность каждого портрета, живую объёмную передачу черт и эксклюзивность исполнения.</p>
               </AccordionContent>
             </AccordionItem>
 
@@ -882,43 +845,7 @@ export default function Index() {
                 Включена ли установка памятника в стоимость?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
-                <p className="mb-4">Да, установка включена в стоимость памятника и включает:</p>
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Подготовка фундамента
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Доставка на кладбище
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Монтаж всех элементов
-                    </li>
-                  </ul>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Финальная обработка
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Уборка территории
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-green-500" />
-                      Гарантия 10 лет
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <p className="text-green-800 text-sm font-medium">
-                    <Icon name="Shield" size={16} className="inline mr-2" />
-                    Установка выполняется только нашими сертифицированными мастерами с опытом работы более 5 лет
-                  </p>
-                </div>
+                <p>Да, установка включена в стоимость памятника и включает: подготовку фундамента, доставку на кладбище, монтаж всех элементов, финальную обработку, уборку территории и гарантию 10 лет. Установка выполняется только нашими сертифицированными мастерами с опытом работы более 5 лет.</p>
               </AccordionContent>
             </AccordionItem>
 
