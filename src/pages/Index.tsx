@@ -605,7 +605,6 @@ export default function Index() {
                 Оставьте заявку и мы закрепим за вами скидку
               </p>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 h-auto">
-                <Icon name="Gift" size={20} className="mr-2" />
                 Оставить заявку
               </Button>
             </div>
