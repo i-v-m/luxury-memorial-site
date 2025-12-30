@@ -181,7 +181,7 @@ export default function MonumentQuiz() {
       <div className="max-w-4xl mx-auto">
         <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-green-200">
           <CardHeader className="text-center pb-6">
-            <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Icon name="CheckCircle" size={32} className="text-white" />
             </div>
             <CardTitle className="text-2xl font-bold text-green-800">

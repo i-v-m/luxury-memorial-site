@@ -94,7 +94,7 @@ const ListItem = ({ className, title, children, href, ...props }: any) => {
         <Link
           to={href}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white',
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-600 hover:text-white focus:bg-green-600 focus:text-white',
             className
           )}
           {...props}
@@ -145,7 +145,7 @@ export default function Header() {
                     {getCartCount() > 0 && (
                       <Badge 
                         variant="default" 
-                        className="h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-green-500 text-white animate-pulse"
+                        className="h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-green-600 text-white animate-pulse"
                       >
                         {getCartCount()}
                       </Badge>
@@ -185,7 +185,7 @@ export default function Header() {
                       <input
                         type="text"
                         placeholder="Поиск..."
-                        className="w-48 px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-48 px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                         autoFocus
                         onBlur={() => setSearchOpen(false)}
                         onKeyDown={(e) => {

@@ -80,7 +80,7 @@ export default function ProductCard({
         />
         <div className="absolute top-2 md:top-3 left-2 md:left-3 flex gap-1 md:gap-2">
           {monument.isNew && (
-            <Badge className="bg-green-500 hover:bg-green-600 text-xs px-2 py-0.5">Новинка</Badge>
+            <Badge className="bg-green-600 hover:bg-green-700 text-xs px-2 py-0.5">Новинка</Badge>
           )}
           {monument.isPopular && (
             <Badge className="bg-orange-500 hover:bg-orange-600 text-xs px-2 py-0.5">Популярный</Badge>
