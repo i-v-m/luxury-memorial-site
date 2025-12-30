@@ -132,8 +132,6 @@ export default function Catalog() {
         />
 
         <CatalogAbout />
-        
-        <CustomOrderBanner />
 
         {/* FAQ Section */}
         <section className="py-16 px-4">
@@ -168,36 +166,11 @@ export default function Catalog() {
                   <p>Стандартные памятники изготавливаются за 14-21 рабочий день. Сложные проекты требуют 25-40 рабочих дней. В сезон высокой загруженности (весна-лето) сроки могут увеличиваться до 30-45 дней. Точные сроки сообщаем при заказе.</p>
                 </AccordionContent>
               </AccordionItem>
-
-              <AccordionItem value="portrait-engraving" className="border border-border rounded-xl px-6">
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  Как происходит гравировка портрета на памятнике?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  <p>Мы предлагаем два способа гравировки портретов: лазерную и ручную. Лазерная гравировка — современная технология с высокой детализацией, точной передачей деталей и полутонов, долговечностью изображения и быстрым выполнением (2-3 дня). Ручная гравировка — художественная работа мастера-гравёра, которая обеспечивает уникальность каждого портрета, живую объёмную передачу черт и эксклюзивность исполнения.</p>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="installation" className="border border-border rounded-xl px-6">
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  Включена ли установка памятника в стоимость?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  <p>Да, установка включена в стоимость памятника и включает: подготовку фундамента, доставку на кладбище, монтаж всех элементов, финальную обработку, уборку территории и гарантию 10 лет. Установка выполняется только нашими сертифицированными мастерами с опытом работы более 5 лет.</p>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="price-factors" className="border border-border rounded-xl px-6">
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  От чего зависит стоимость памятника?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  <p>Цена зависит от размера, материала (гранит, мрамор, бронза), сложности оформления и дополнительных услуг.</p>
-                </AccordionContent>
-              </AccordionItem>
             </Accordion>
           </div>
         </section>
+        
+        <CustomOrderBanner />
       </div>
     </Layout>
   );
