@@ -808,10 +808,7 @@ export default function Index() {
           <Accordion type="single" collapsible className="w-full space-y-4">
             <AccordionItem value="materials" className="border border-border rounded-xl px-6">
               <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                <div className="flex items-center gap-3">
-                  <Icon name="Mountain" size={20} className="text-primary" />
-                  Какие материалы используются для изготовления памятников?
-                </div>
+                Какие материалы используются для изготовления памятников?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
                 <p className="mb-4">Мы используем только премиальные материалы высочайшего качества:</p>
@@ -827,10 +824,7 @@ export default function Index() {
 
             <AccordionItem value="production-time" className="border border-border rounded-xl px-6">
               <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                <div className="flex items-center gap-3">
-                  <Icon name="Clock" size={20} className="text-primary" />
-                  Сколько времени занимает изготовление памятника?
-                </div>
+                Сколько времени занимает изготовление памятника?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
                 <p className="mb-4">Сроки изготовления зависят от сложности проекта:</p>
@@ -850,10 +844,7 @@ export default function Index() {
 
             <AccordionItem value="portrait-engraving" className="border border-border rounded-xl px-6">
               <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                <div className="flex items-center gap-3">
-                  <Icon name="Camera" size={20} className="text-primary" />
-                  Как происходит гравировка портрета на памятнике?
-                </div>
+                Как происходит гравировка портрета на памятнике?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
                 <p className="mb-4">Мы предлагаем два способа гравировки портретов:</p>
@@ -888,10 +879,7 @@ export default function Index() {
 
             <AccordionItem value="installation" className="border border-border rounded-xl px-6">
               <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                <div className="flex items-center gap-3">
-                  <Icon name="Wrench" size={20} className="text-primary" />
-                  Включена ли установка памятника в стоимость?
-                </div>
+                Включена ли установка памятника в стоимость?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
                 <p className="mb-4">Да, установка включена в стоимость памятника и включает:</p>
@@ -936,10 +924,7 @@ export default function Index() {
 
               <AccordionItem value="price-factors" className="border border-border rounded-xl px-6">
                 <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  <div className="flex items-center gap-3">
-                    <Icon name="Calculator" size={20} className="text-primary" />
-                    От чего зависит стоимость памятника?
-                  </div>
+                  От чего зависит стоимость памятника?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
                   <p>Цена зависит от размера, материала (гранит, мрамор, бронза), сложности оформления и дополнительных услуг.</p>
