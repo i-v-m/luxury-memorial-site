@@ -362,7 +362,7 @@ export default function HeaderBottomMenu() {
             {/* Логотип слева */}
             <Link to="/" className="flex items-center space-x-2 mr-8">
 
-              <span className="font-serif text-xl font-semibold text-green-600">Pamyatniki.Memorial</span>
+              <span className="font-serif text-xl font-semibold text-green-600">Pamyatniki-ritual.ru</span>
             </Link>
 
             {/* Навигационные разделы - скрыто на мобильных */}
